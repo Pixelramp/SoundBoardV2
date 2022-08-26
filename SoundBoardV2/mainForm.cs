@@ -668,7 +668,18 @@ namespace SoundBoardV2
 
         private void button2_Click_3(object sender, EventArgs e)
         {
-           
+            for (int i = 0; i < sounds.Count; i++)
+            {
+                for (int o = 0; o < sounds[i].Count; o++)
+                {
+                    if (sounds[i][o].text.ToUpper().Contains(textBox1.Text.ToUpper()))
+                    {
+                        Console.WriteLine("Found " + sounds[i][o].text);
+
+                        break;
+                    }
+                }
+            }
         }
     }
 }
