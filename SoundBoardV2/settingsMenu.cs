@@ -122,9 +122,9 @@ namespace SoundBoardV2
 
         private void button5_Click(object sender, EventArgs e)
         {
-            AutoUpdater.ShowRemindLaterButton = false;
+            AutoUpdater.ShowRemindLaterButton = true;
             AutoUpdater.Mandatory = true;
-            AutoUpdater.Start("http://big-and-chunky.de/soundboard.xml");
+            AutoUpdater.Start("http://38.242.152.87/soundboard.xml");
             
         }
     }

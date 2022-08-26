@@ -44,8 +44,8 @@ namespace SoundBoardV2
             // 
             // deleteButton
             // 
-            this.deleteButton.BackColor = System.Drawing.Color.Red;
-            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.BackColor = System.Drawing.Color.OrangeRed;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.deleteButton.Font = new System.Drawing.Font("Impact", 15F);
             this.deleteButton.Location = new System.Drawing.Point(10, 244);
             this.deleteButton.Name = "deleteButton";
@@ -57,8 +57,8 @@ namespace SoundBoardV2
             // 
             // saveButton
             // 
-            this.saveButton.BackColor = System.Drawing.Color.Green;
-            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.saveButton.Font = new System.Drawing.Font("Impact", 15F);
             this.saveButton.Location = new System.Drawing.Point(150, 244);
             this.saveButton.Name = "saveButton";

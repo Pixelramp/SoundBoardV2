@@ -643,5 +643,32 @@ namespace SoundBoardV2
             saver.saveUserData(userSettings, Directory.GetCurrentDirectory());
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (var form = new downloadForm())
+            {
+                var result = form.ShowDialog();
+
+
+            }
+        }
+        
+        private int getSoundSite(int soundID) //23 IDs pro seite. 0 - 23 Seite 1
+        {
+            
+
+            float cal_site = soundID / 24;
+
+
+            int sound_site = Convert.ToInt32(Math.Floor(cal_site));
+
+            return sound_site;
+
+        }
+
+        private void button2_Click_3(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
