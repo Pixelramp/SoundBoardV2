@@ -259,6 +259,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="auswahl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="auswahl.Designer.cs">
+      <DependentUpon>auswahl.cs</DependentUpon>
+    </Compile>
     <Compile Include="configMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,6 +319,9 @@
     <Compile Include="save_load_hotkey.cs" />
     <Compile Include="soundButton.cs" />
     <Compile Include="userSettings.cs" />
+    <EmbeddedResource Include="auswahl.resx">
+      <DependentUpon>auswahl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="configMenu.resx">
       <DependentUpon>configMenu.cs</DependentUpon>
     </EmbeddedResource>

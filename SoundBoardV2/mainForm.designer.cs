@@ -32,17 +32,15 @@ namespace SoundBoardV2
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.navigationPanel = new System.Windows.Forms.TableLayoutPanel();
             this.siteSwitchPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.nextSite = new System.Windows.Forms.Button();
-            this.prevSite = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.soundStop = new System.Windows.Forms.Button();
-            this.soundPause = new System.Windows.Forms.Button();
-            this.soundResume = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBoxSpam = new System.Windows.Forms.CheckBox();
             this.checkBoxConfig = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonPanel = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.soundLabelHead = new System.Windows.Forms.Label();
@@ -57,17 +55,20 @@ namespace SoundBoardV2
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.mainLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.nextSite = new System.Windows.Forms.Button();
+            this.prevSite = new System.Windows.Forms.Button();
+            this.soundStop = new System.Windows.Forms.Button();
+            this.soundPause = new System.Windows.Forms.Button();
+            this.soundResume = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.navigationPanel.SuspendLayout();
             this.siteSwitchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -76,7 +77,6 @@ namespace SoundBoardV2
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // navigationPanel
@@ -116,34 +116,6 @@ namespace SoundBoardV2
             this.siteSwitchPanel.TabIndex = 0;
             this.siteSwitchPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.siteSwitchPanel_Paint);
             // 
-            // nextSite
-            // 
-            this.nextSite.BackColor = System.Drawing.Color.Gray;
-            this.nextSite.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nextSite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextSite.Image = global::SoundBoardV2.Properties.Resources.right_arrow;
-            this.nextSite.Location = new System.Drawing.Point(155, 3);
-            this.nextSite.Name = "nextSite";
-            this.nextSite.Size = new System.Drawing.Size(72, 60);
-            this.nextSite.TabIndex = 0;
-            this.nextSite.UseVisualStyleBackColor = false;
-            this.nextSite.Click += new System.EventHandler(this.nextSite_Click);
-            // 
-            // prevSite
-            // 
-            this.prevSite.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
-            this.prevSite.BackColor = System.Drawing.Color.Gray;
-            this.prevSite.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.prevSite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prevSite.ForeColor = System.Drawing.Color.Black;
-            this.prevSite.Image = global::SoundBoardV2.Properties.Resources.left__arrow;
-            this.prevSite.Location = new System.Drawing.Point(3, 3);
-            this.prevSite.Name = "prevSite";
-            this.prevSite.Size = new System.Drawing.Size(70, 60);
-            this.prevSite.TabIndex = 1;
-            this.prevSite.UseVisualStyleBackColor = false;
-            this.prevSite.Click += new System.EventHandler(this.prevSite_Click);
-            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -170,45 +142,6 @@ namespace SoundBoardV2
             this.tableLayoutPanel1.Size = new System.Drawing.Size(228, 66);
             this.tableLayoutPanel1.TabIndex = 1;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // soundStop
-            // 
-            this.soundStop.BackColor = System.Drawing.Color.Gray;
-            this.soundStop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.soundStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.soundStop.Image = global::SoundBoardV2.Properties.Resources.halt;
-            this.soundStop.Location = new System.Drawing.Point(3, 3);
-            this.soundStop.Name = "soundStop";
-            this.soundStop.Size = new System.Drawing.Size(70, 60);
-            this.soundStop.TabIndex = 0;
-            this.soundStop.UseVisualStyleBackColor = false;
-            this.soundStop.Click += new System.EventHandler(this.soundStop_Click);
-            // 
-            // soundPause
-            // 
-            this.soundPause.BackColor = System.Drawing.Color.Gray;
-            this.soundPause.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.soundPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.soundPause.Image = global::SoundBoardV2.Properties.Resources.pause__1_;
-            this.soundPause.Location = new System.Drawing.Point(79, 3);
-            this.soundPause.Name = "soundPause";
-            this.soundPause.Size = new System.Drawing.Size(70, 60);
-            this.soundPause.TabIndex = 1;
-            this.soundPause.UseVisualStyleBackColor = false;
-            this.soundPause.Click += new System.EventHandler(this.soundPause_Click);
-            // 
-            // soundResume
-            // 
-            this.soundResume.BackColor = System.Drawing.Color.Gray;
-            this.soundResume.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.soundResume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.soundResume.Image = global::SoundBoardV2.Properties.Resources.pfeilspitze_der_wiedergabetaste;
-            this.soundResume.Location = new System.Drawing.Point(155, 3);
-            this.soundResume.Name = "soundResume";
-            this.soundResume.Size = new System.Drawing.Size(70, 60);
-            this.soundResume.TabIndex = 2;
-            this.soundResume.UseVisualStyleBackColor = false;
-            this.soundResume.Click += new System.EventHandler(this.soundPlay_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -265,6 +198,40 @@ namespace SoundBoardV2
             this.checkBoxConfig.Text = "Config";
             this.checkBoxConfig.UseVisualStyleBackColor = true;
             this.checkBoxConfig.CheckedChanged += new System.EventHandler(this.checkBoxConfig_CheckedChanged);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.5F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.5F));
+            this.tableLayoutPanel4.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 36);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(222, 27);
+            this.tableLayoutPanel4.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Location = new System.Drawing.Point(155, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(64, 21);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Search";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_3);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(146, 20);
+            this.textBox1.TabIndex = 1;
             // 
             // buttonPanel
             // 
@@ -472,6 +439,73 @@ namespace SoundBoardV2
             this.tableLayoutPanel9.Size = new System.Drawing.Size(205, 66);
             this.tableLayoutPanel9.TabIndex = 2;
             // 
+            // nextSite
+            // 
+            this.nextSite.BackColor = System.Drawing.Color.Gray;
+            this.nextSite.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nextSite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextSite.Image = global::SoundBoardV2.Properties.Resources.right_arrow;
+            this.nextSite.Location = new System.Drawing.Point(155, 3);
+            this.nextSite.Name = "nextSite";
+            this.nextSite.Size = new System.Drawing.Size(72, 60);
+            this.nextSite.TabIndex = 0;
+            this.nextSite.UseVisualStyleBackColor = false;
+            this.nextSite.Click += new System.EventHandler(this.nextSite_Click);
+            // 
+            // prevSite
+            // 
+            this.prevSite.AccessibleRole = System.Windows.Forms.AccessibleRole.Border;
+            this.prevSite.BackColor = System.Drawing.Color.Gray;
+            this.prevSite.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prevSite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prevSite.ForeColor = System.Drawing.Color.Black;
+            this.prevSite.Image = global::SoundBoardV2.Properties.Resources.left__arrow;
+            this.prevSite.Location = new System.Drawing.Point(3, 3);
+            this.prevSite.Name = "prevSite";
+            this.prevSite.Size = new System.Drawing.Size(70, 60);
+            this.prevSite.TabIndex = 1;
+            this.prevSite.UseVisualStyleBackColor = false;
+            this.prevSite.Click += new System.EventHandler(this.prevSite_Click);
+            // 
+            // soundStop
+            // 
+            this.soundStop.BackColor = System.Drawing.Color.Gray;
+            this.soundStop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.soundStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.soundStop.Image = global::SoundBoardV2.Properties.Resources.halt;
+            this.soundStop.Location = new System.Drawing.Point(3, 3);
+            this.soundStop.Name = "soundStop";
+            this.soundStop.Size = new System.Drawing.Size(70, 60);
+            this.soundStop.TabIndex = 0;
+            this.soundStop.UseVisualStyleBackColor = false;
+            this.soundStop.Click += new System.EventHandler(this.soundStop_Click);
+            // 
+            // soundPause
+            // 
+            this.soundPause.BackColor = System.Drawing.Color.Gray;
+            this.soundPause.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.soundPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.soundPause.Image = global::SoundBoardV2.Properties.Resources.pause__1_;
+            this.soundPause.Location = new System.Drawing.Point(79, 3);
+            this.soundPause.Name = "soundPause";
+            this.soundPause.Size = new System.Drawing.Size(70, 60);
+            this.soundPause.TabIndex = 1;
+            this.soundPause.UseVisualStyleBackColor = false;
+            this.soundPause.Click += new System.EventHandler(this.soundPause_Click);
+            // 
+            // soundResume
+            // 
+            this.soundResume.BackColor = System.Drawing.Color.Gray;
+            this.soundResume.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.soundResume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.soundResume.Image = global::SoundBoardV2.Properties.Resources.pfeilspitze_der_wiedergabetaste;
+            this.soundResume.Location = new System.Drawing.Point(155, 3);
+            this.soundResume.Name = "soundResume";
+            this.soundResume.Size = new System.Drawing.Size(70, 60);
+            this.soundResume.TabIndex = 2;
+            this.soundResume.UseVisualStyleBackColor = false;
+            this.soundResume.Click += new System.EventHandler(this.soundPlay_Click);
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Gray;
@@ -498,40 +532,6 @@ namespace SoundBoardV2
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.5F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.5F));
-            this.tableLayoutPanel4.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox1, 0, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 36);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(222, 27);
-            this.tableLayoutPanel4.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(155, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 21);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_3);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 1;
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,6 +550,8 @@ namespace SoundBoardV2
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.mainPanel.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -562,8 +564,6 @@ namespace SoundBoardV2
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
