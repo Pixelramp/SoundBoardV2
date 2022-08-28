@@ -7,7 +7,8 @@ using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using NAudio.Wave;
 using AutoUpdaterDotNET;
-
+using System.Windows.Controls.Primitives;
+using System.Threading.Tasks;
 
 namespace SoundBoardV2
 {
@@ -274,13 +275,15 @@ namespace SoundBoardV2
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                string selectedFileName = dialog.FileName;
-                sounds[aktSite][id].path = selectedFileName;
-                int pos = selectedFileName.LastIndexOf("\\") + 1;
-                sounds[aktSite][id].text = Interaction.InputBox("Name of the Sound", "Name", selectedFileName.Substring(pos, selectedFileName.Length - pos));
-                sounds[aktSite][id].isFilled = true;
-                fillButtons(aktSite);
-                save();
+                string selectedFileName = dialog.FileName;              
+                    sounds[aktSite][id].path = selectedFileName;
+                    int pos = selectedFileName.LastIndexOf("\\") + 1;
+                    sounds[aktSite][id].text = Interaction.InputBox("Name of the Sound", "Name", selectedFileName.Substring(pos, selectedFileName.Length - pos));
+                    sounds[aktSite][id].isFilled = true;
+                    fillButtons(aktSite);
+                    save();
+                
+                
             }
         }
         private void soundPlay_Click(object sender, EventArgs e)
@@ -643,5 +646,121 @@ namespace SoundBoardV2
             saver.saveUserData(userSettings, Directory.GetCurrentDirectory());
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (var form = new downloadForm())
+            {
+                var result = form.ShowDialog();
+
+
+            }
+        }
+        
+        private int getSoundSite(int soundID) //23 IDs pro seite. 0 - 23 Seite 1
+        {
+            
+
+            float cal_site = soundID / 24;
+
+
+            int sound_site = Convert.ToInt32(Math.Floor(cal_site));
+
+            return sound_site;
+
+        }
+
+        private void button2_Click_3(object sender, EventArgs e)
+        {
+            int selectedIndex = 0;
+            List<string> foundNames = new List<string>();
+            List<soundss> soundFound = new List<soundss>();
+            soundss selectedSound = new soundss();
+
+            switch (textBox1.Text.ToUpper())
+            {
+
+                case "EMPTY":
+                    MessageBox.Show("Can't search for Empty");
+                    break;
+
+                case "":
+                    MessageBox.Show("Seach can't be empty");
+                    break;
+
+                default:
+                   
+
+                    for (int i = 0; i < sounds.Count; i++)
+                    {
+                        for (int o = 0; o < sounds[i].Count; o++)
+                        {
+                            if (sounds[i][o].text.ToUpper().Contains(textBox1.Text.ToUpper()))
+                            {
+                                soundFound.Add(new soundss(i, o));
+
+                            }
+                        }
+                    }
+
+                    if (soundFound.Count == 1)
+                    {
+                        aktSite = soundFound[0].Site;
+                        fillButtons(aktSite);
+
+                        selectedSound = new soundss(soundFound[0].Site, soundFound[0].Id);
+                    }
+                    else
+                    {
+                        
+                        for (int i = 0; i < soundFound.Count; i++)
+                        {
+                            foundNames.Add("Sound : " + sounds[soundFound[i].Site][soundFound[i].Id].text + " site : " + soundFound[i].Site);
+                        }
+
+                      
+                        using (var forme = new auswahl(foundNames))
+                        {
+                            var result = forme.ShowDialog();
+                            selectedIndex = forme.selected;
+                        }
+                        selectedSound = new soundss(soundFound[selectedIndex].Site, soundFound[selectedIndex].Id);
+
+
+
+                        
+                    }
+                    break;
+            }
+
+            aktSite = selectedSound.Site;
+            fillButtons(aktSite);
+            BlinkBtn(selectedSound.Id);
+            textBox1.Text = "";
+
+
+        }
+        public struct soundss
+        {
+            public soundss(int site, int id)
+            {
+                Site = site;
+                Id = id;
+            }
+
+            public int Site { get; }
+            public int Id { get; }
+
+        }
+        private async void BlinkBtn(int btnID)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                buttons[btnID].BackColor = Color.White;
+                await Task.Delay(200);
+                buttons[btnID].BackColor = Color.Gray;
+                await Task.Delay(200);
+            }
+            fillButtons(aktSite);
+        }
     }
 }
