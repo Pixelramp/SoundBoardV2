@@ -729,13 +729,14 @@ namespace SoundBoardV2
 
                         
                     }
+                    aktSite = selectedSound.Site;
+                    fillButtons(aktSite);
+                    BlinkBtn(selectedSound.Id);
+                    textBox1.Text = "";
                     break;
             }
 
-            aktSite = selectedSound.Site;
-            fillButtons(aktSite);
-            BlinkBtn(selectedSound.Id);
-            textBox1.Text = "";
+
 
 
         }
